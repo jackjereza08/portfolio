@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    /* border: 1px solid red; */
+}
+
+:root {
+    --bg-green: #005544;
+    --text-light-green: #d7f4d7;
+    --text-green: #00d455;
+    --shadow-color: #585858;
+}
+
+html {
+    background-color: var(--bg-green);
+}
+
+section.home {
+    background-image: url('../media/coverphoto.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 100dvh;
+    height: 100svh;
+    height: 100vh;
+}
+
+div.bg-opaque {
+    position: absolute;
+    background-color: var(--bg-green);
+    height: 100dvh;
+    height: 100svh;
+    height: 100vh;
+    width: 100%;
+    opacity: 50%;
+    z-index: 1;
+}
+
+div.profile {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    height: 100%;
+    grid-template-rows: .3fr 1fr .2fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "quote"
+        "p-wrapper"
+        "ad";
+}
+
+div.quote {
+    display: grid;
+    grid-area: quote;
+    color: var(--text-light-green);
+    justify-content: center;
+    align-items: end;
+}
+
+div.quote span {
+    position: relative;
+    text-align: center;
+    font-style: italic;
+    font-size: 1.6rem;
+}
+
+div.profile-wrapper {
+    display: flex;
+    grid-area: p-wrapper;
+    justify-content: center;
+    align-items: center;
+}
+
+div.profile-wrapper div {
+    margin: 0 10px;
+}
+
+div.profile-img div.img {
+    position: relative;
+    background-image: url('../media/profilepic.jpg');
+    background-position: center;
+    background-size: contain;
+    width: 13rem;
+    height: 13rem;
+    border-radius: 50%;
+}
+
+div.profile-name {
+    position: relative;
+    margin-left: 20px;
+}
+
+div.profile-name-container {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+}
+
+div.profile-name-container h1 {
+    display: inline;
+    font-size: 3.1rem;
+    font-weight: normal;
+    color: var(--text-light-green);
+}
+
+div.profile-name-container span.profession {
+    display: inline;
+    font-size: 1.3rem;
+    color: var(--text-green);
+}
+
+div.profile-name-container div.profile-socmed {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 2rem;
+}
+
+div.profile-name-container div.profile-socmed a {
+    color: var(--text-light-green);
+}
+
+div.arrow-down {
+    grid-area: ad;
+    display:grid;
+    justify-content: center;
+}
+
+div.arrow-down-img {
+    width: 2.3rem;
+    height: 2.3rem;
+    background-image: url('../media/arrow-down.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation-name: arrow-down;
+    animation-duration: 1s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+@keyframes arrow-down{
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(20px);
+    }
+}
