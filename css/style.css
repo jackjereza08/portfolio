@@ -9,7 +9,7 @@
     --bg-green: #005544;
     --text-light-green: #cbf7cb;
     --text-green: #00d455;
-    --shadow-color: #585858;
+    --shadow-color: #123a1c;
 }
 
 html {
@@ -146,67 +146,92 @@ div.arrow-down-img {
     }
 }
 /* END SECTION HOME */
-
+.container-fluid {
+    margin: 0 15% auto;
+}
 /* SECTION PORTFOLIO */
 section.portfolio {
-    height: 100vh;
+    height: calc(100vh - 4em);
+    padding-top: 4em;
 }
 
-div.container-fluid {
-    width: 70%;
-    margin: auto;
-    padding-top: 50px;
-}
-
-.portfolio-layout {
+.projects {
     display: grid;
-    grid-template-rows: .3fr 1fr;
+    row-gap: 2rem;
 }
 
-h1.header {
-    color: var(--text-light-green);
-    font-size: 2rem;
+.divider {
+    margin: 20px 0;
+    height: 3px;
+    background-color: var(--shadow-color);
+}
+
+.header {
     text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--text-light-green);
 }
 
 .card {
-    display: grid;
-    grid-template-columns: .5fr 1fr;
+    display:grid;
     gap: 2em;
+    margin: 0 5% auto;
+    padding: 15px 20px;
+    box-shadow: 1px 1px 10px var(--shadow-color);
+    border-radius: 10px;
 }
 
-.card-left {
-    display: grid;
-    grid-column: 1;
-    grid-row: 1;
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.card-right {
-    display: grid;
-    grid-column: 2;
-    grid-row: 1;
-}
-
-.card-left, .card-right {
-    justify-content: center;
+.card-body h3 {
+    color: var(--text-green);
+    margin-bottom: 5px;
+    text-align: center;
 }
 
 .card-body p {
     text-align: justify;
+    color: var(--text-light-green);
 }
 
-.divider {
-    margin: 40px 0;
-    height: 3px;
-    background-color: var(--text-light-green);
-    border-radius: 10px;
+.card-right {
+    display: flex;
+    grid-row: 1;
+    grid-column: 2;
+}
+
+.card-left {
+    display: flex;
+    grid-row: 1;
+    grid-column: 1;
+}
+
+.card-left .tools-used {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.card-right .tools-used {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.tools-used span{
+    margin: 0 5px;
+    padding: 2px 3px;
+    color: var(--text-green);
 }
 
 .project-media {
-    width: 300px;
-    height: 200px;
-    background-color: var(--text-light-green);
-    border-radius: 5px;
+    position: relative;
+    width: 400px;
+    height: 225px;
+    background-color: var(--shadow-color);
+    border-radius: 10px;
 }
-
 /* END SECTION PORTFOLIO */
