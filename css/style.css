@@ -289,5 +289,26 @@ div.info h3:not(:first-child) {
 div.info h3:first-child {
     margin-bottom: 1em;
 }
-
 /* END SECTION ABOUT */
+/* SECTION CONTACT */
+section.contact {
+    height: calc(100lvh - 4em);
+    height: calc(100dvh - 4em);
+    height: calc(100svh - 4em);
+    height: calc(100vh - 4em);
+}
+
+div.contact-info {
+    height: calc(100% - 4em);
+    display:flex;
+    flex-direction: column;
+    margin: 0 5rem auto;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+/* END SECTION CONTACT */
