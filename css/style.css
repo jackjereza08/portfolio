@@ -308,6 +308,10 @@ div.contact-info {
     justify-content: space-evenly;
 }
 
+div.contact-info a {
+    text-decoration: none;
+}
+
 .text-bold {
     font-weight: bold;
 }
