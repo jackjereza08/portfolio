@@ -24,6 +24,10 @@ html {
     color: var(--text-light-green);
 }
 
+.bg-color {
+    color: var(--bg-green);
+}
+
 .text-justify {
     text-align: justify;
 }
@@ -161,10 +165,19 @@ div.arrow-down-img {
 .container-fluid {
     margin: 0 15% auto;
 }
+
+.header {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--text-green);
+}
 /* SECTION PORTFOLIO */
 section.portfolio {
     height: max-content;
     padding-top: 4em;
+    padding-bottom: 4em;
+    background-color: var(--text-light-green);
 }
 
 .projects {
@@ -178,11 +191,11 @@ section.portfolio {
     background-color: var(--shadow-color);
 }
 
-.header {
+.portfolio div>.header {
     text-align: center;
     font-size: 2rem;
     margin-bottom: 2rem;
-    color: var(--text-light-green);
+    color: var(--bg-green);
 }
 
 .card {
@@ -208,7 +221,7 @@ section.portfolio {
 
 .card-body p {
     text-align: justify;
-    color: var(--text-light-green);
+    color: var(--bg-green);
 }
 
 .card-right {
@@ -249,14 +262,15 @@ section.portfolio {
 /* END SECTION PORTFOLIO */
 /* SECTION ABOUT */
 section.about {
-    height: calc(100lvh - 4em);
-    height: calc(100dvh - 4em);
-    height: calc(100svh - 4em);
-    height: calc(100vh - 4em);
+    min-height: calc(100lvh - 4em);
+    min-height: calc(100dvh - 4em);
+    min-height: calc(100svh - 4em);
+    min-height: calc(100vh - 4em);
     display: grid;
     grid-template-columns: .5fr 1fr;
     grid-template-rows: .2fr 1fr;
     padding-top: 4em;
+    padding-bottom: 4em;
     grid-template-areas: 
         "hd hd"
         "img text"
@@ -296,6 +310,12 @@ section.contact {
     height: calc(100dvh - 4em);
     height: calc(100svh - 4em);
     height: calc(100vh - 4em);
+    padding-top: 4em;
+    background-color: var(--shadow-color);
+}
+
+.contact .container-fluid {
+    height:inherit;
 }
 
 div.contact-info {
